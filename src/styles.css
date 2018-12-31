@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+
+:root {
+  font-size: 10px;
+  --card-bg-image-color: linear-gradient(to bottom right, #ccc, #eee);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+span,
+button {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+}
+
+.App {
+  background: linear-gradient(#fff, #cee);
+  min-height: 100vh;
+  padding-top: 3rem;
+  position: relative;
+}
+header {
+  text-align: center;
+}
+
+header h1,
+.card-container .card .info-container h2 {
+  text-transform: uppercase;
+}
+
+header h1 {
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  font-size: 3rem;
+  line-height: 1.6;
+}
+
+header h3 {
+  font-weight: lighter;
+  font-size: 2rem;
+  margin-bottom: 80px;
+}
+
+.card-container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(10, minmax(220px, 50vw));
+  padding-left: 4rem;
+  overflow: scroll;
+}
+
+.card-container .card {
+  background-color: #fff;
+  padding-bottom: 2rem;
+  /* border: 2px solid red; */
+  text-align: left;
+  margin-right: 2rem;
+}
+
+.card-container .card .image-container {
+  background: var(--card-bg-image-color);
+}
+
+.card-container .card img {
+  width: 100%;
+}
+
+.card-container .card .info-container {
+  padding: 0 2.5rem;
+}
+
+.card-container .card .info-container h2 {
+  font-size: 1.8rem;
+  padding: 2rem 0;
+}
+
+.card-container .card .info-container p {
+  font-size: 1.4rem;
+  font-weight: lighter;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+
+.buttons-container {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  width: 100vw;
+  padding-bottom: 2rem;
+}
+
+.options-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.options-container span {
+  display: inline-flex;
+  font-size: 14px;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(20, 20, 20, 0.1);
+}
+button {
+  border: none;
+  box-shadow: 0 4px 1px 10px rgba(0, 0, 0, 0.03);
+  display: block;
+  font-size: 1.5rem;
+  letter-spacing: 0.4px;
+  margin: 0 auto;
+  width: 90%;
+  padding: 2rem 0;
+}
+
+button[data-dark] {
+  background-color: #202021;
+  color: #fff;
+  font-weight: normal;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
